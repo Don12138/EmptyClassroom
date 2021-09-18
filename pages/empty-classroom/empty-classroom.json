@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "空闲教室",
+    "navigationBarBackgroundColor": "#004f99",
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+      "calendar": "/component/v2/index",
+      "wux-notice-bar": "/component/notice-bar/index"
+    }
+}
+
+  

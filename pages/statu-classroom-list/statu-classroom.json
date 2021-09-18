@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mp-html": "/component/mp-html/index",
+    "wux-notice-bar": "/component/notice-bar/index"
+  }
+}

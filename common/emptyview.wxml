@@ -1,0 +1,25 @@
+<template name="empty">
+    <view class="empty">
+        <block wx:if="{{state!=0}}">
+            <block wx:if="{{state==1}}">
+                <image src="{{image?image:'/images/ic_none_failed.png'}}"></image>
+                <view class="empty_promt">{{msg?msg:'暂时没有内容哦~'}}</view>
+            </block>
+            <block wx:elif="{{state==2}}">
+                <image src="{{image?image:'/images/ic_none_failed.png'}}"></image>
+                <view class="empty_promt">您还没有登录~</view>
+                <view class="empty_refresh">
+                    <text bindtap="bindLogin">登录</text>
+                </view>
+            </block>
+            <block wx:elif="{{state==3}}">
+                <image src="{{image?image:'/images/ic_none_failed.png'}}"></image>
+                <view class="empty_promt">数据请求失败~</view>
+                <view class="empty_refresh">
+                    <text bindtap="bindRetry">刷新重试</text>
+                </view>
+            </block>
+        </block>
+    </view>
+</template>
+ 

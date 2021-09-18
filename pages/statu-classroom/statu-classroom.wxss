@@ -1,0 +1,161 @@
+
+.datepicker-box {
+	margin: 100rpx;
+}
+
+button {
+	margin-top: 100rpx;
+	margin-bottom: 40rpx;
+}
+.room-time {
+	font-size: 42rpx;
+	color: #576B95;
+	background: #FFFFFF;
+	border-radius: 10rpx;
+	line-height: 88rpx;
+	margin: 20rpx;
+	width: 710rpx;
+	height: 120rpx;
+}
+
+.room-time image {
+	width: 44rpx;
+	height: 46rpx;
+	padding: 0 20rpx;
+}
+
+.picker-view {
+	font-size: 42rpx;
+	color: #576B95;
+	background: #FFFFFF;
+	border-radius: 10rpx;
+	line-height: 88rpx;
+	margin: 20rpx;
+	width: 710rpx;
+	height: 350rpx;
+}
+
+.cell {
+	width: 670rpx;
+}
+
+.check_box_view{
+	height: 125rpx;
+	width: 710rpx;
+	position: relative;
+	background: #FFFFFF;
+	left:20rpx;
+	justify-content:space-around;
+	border-radius: 10rpx;
+	border: 0.5px solid rgba(179,179,179,1);
+}
+.check_box_tech_view{
+	height: 500rpx;
+	width: 710rpx;
+	position: relative;
+	background: #FFFFFF;
+	left:20rpx;
+	justify-content:space-around;
+	border-radius: 10rpx;
+	border: 0.5px solid rgba(179,179,179,1);
+}
+.check_box{
+	height: 95%;
+	width: 100%;
+	justify-content: space-around;
+}
+.check_box_1{
+	height: 25%;
+	width: 100%;
+	justify-content: space-around;
+}
+
+.cell:after {
+	right: 20rpx;
+}
+
+.check_ali{
+	justify-content: space-around;
+}
+
+.cell-value {
+	text-align: right;
+	flex: 1;
+	color: #576B95;
+	margin-right: 20rpx;
+}
+
+.btn-green {
+	margin: 40rpx;
+	background: #004f99;
+	border-radius: 10rpx;
+}
+.container2 {
+	height: 100%;
+	flex-direction: column;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.select {
+	width: 100%;
+	height: 40rpx;
+	font-size: 28rpx;
+	font-family: PingFangSC-Regular;
+	font-weight: 400;
+	color: rgba(179,179,179,1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.select-item {
+	padding: 0rpx;
+}
+
+.cell-image {
+	width: 39rpx;
+	height: 40rpx;
+	margin-right: 20rpx;
+}
+
+.select-item text {
+	font-size: 28rpx;
+	color: #576B95;
+	background: #f5f6fa;
+	padding-top: 8rpx;
+	padding-bottom: 8rpx;
+	border-radius: 30rpx;
+	line-height: 40rpx;
+	height: 40rpx;
+	background: rgba(255,255,255,1);
+	text-align: center;
+	margin-left: 20rpx;
+	margin-bottom: 20rpx;
+	float: left;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+	border: 1rpx solid #2795e5;
+	background: #2795e5;
+}
+.bottom {
+	background: #fff;
+	height: 100rpx;
+	text-align: center;
+	line-height: 100rpx;
+	font-size: 32rpx;
+	color: #2795e5;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+.delete {
+	width: 25rpx;
+	height: 25rpx;
+	position: absolute;
+	top: 32rpx;
+	right: 28rpx;
+}

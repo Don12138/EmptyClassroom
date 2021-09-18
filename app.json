@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/empty-classroom/empty-classroom",
+    "pages/statu-classroom/statu-classroom",
+    "pages/statu-classroom-list/statu-classroom",
+    "pages/study/study",
+    "pages/classroom-list/classroom-list"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "空闲教室查询",
+    "navigationBarBackgroundColor": "#004f99",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#004f99",
+    "color": "#999999",
+    "list": [
+      {
+        "pagePath": "pages/empty-classroom/empty-classroom",
+        "text": "空闲教室查询",
+        "iconPath": "images/icon11.png",
+        "selectedIconPath": "images/icon12.png"
+      },
+      {
+        "pagePath": "pages/statu-classroom/statu-classroom",
+        "text": "教室状态查询",
+        "iconPath": "images/icon21.png",
+        "selectedIconPath": "images/icon22.png"
+      },
+      {
+        "pagePath": "pages/study/study",
+        "text": "校历与作息",
+        "iconPath": "images/icon31.png",
+        "selectedIconPath": "images/icon32.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
+
+   

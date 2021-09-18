@@ -1,0 +1,93 @@
+<view clss="container2">
+    <wux-notice-bar loop leading="2000" trailing="3000" speed="15" mode = "closable">{{notifucationText}}</wux-notice-bar>
+    <view class="room-time flex align-center" bindtap="callDatepicker" >
+        <image src="/images/ic_date.png"></image>
+        <text wx:if="{{isToday}}">{{selectDayStr}} 今天 (切换)</text>
+        <text wx:if="{{!isToday}}">{{selectDayStr}} (切换)</text>
+    </view>
+    
+    <calendar wx:if="{{show_calendar}}" id = "calendar"
+  config="{{calendarConfig}}"
+  bind:afterTapDate="afterTapDate"
+  bind:afterCalendarRender="afterCalendarRender"></calendar>
+    
+    <view class="picker-view">
+        <picker class="cell" disabled>
+            <view class="cell" style="padding-left:0rpx;">
+                <image class="cell-image" src="/images/ic_common_school.png"></image>校区
+                <text class="cell-value" style="color:#999;" >二校区</text>
+                <image class="more-black" src=""></image>
+            </view>
+        </picker>
+
+        <picker bindtap="show_check_tech" class="cell" disabled>
+            <view class="cell" style="padding-left:0rpx;">
+                <image class="cell-image" src="/images/ic_common_gongsi.png"></image>教学楼
+                <text class="cell-value" style="color:#999;" wx:if="{{!chooseTech}}">请选择教学楼</text>
+                <text class="cell-value" wx:if="{{chooseTech&&TechCount==1}}">{{teachingBuildStr[indexTeach]}}</text>
+                <text class="cell-value" wx:if="{{chooseTech&&TechCount!=1}}">选中了多个教学楼</text>
+                <image catchtap="tap_clear_teach" class="more-black" src="/images/ic_evaluate_delete.png"
+                    wx:if="{{chooseTech}}"></image>
+                    <image wx:if="{{show_check_tech&&!chooseTech}}" class="more-black" src="/images/down.png"></image>
+                <image wx:if="{{!show_check_tech&&!chooseTech}}" class="more-black" src="/images/ic_application_more.png"></image>
+            </view>
+        </picker>
+
+        <view class="cell" style="width:100%" bindtap="show_check">
+            <view class="cell" style="padding-left:0rpx;">
+                <image class="cell-image" src="/images/custom.png"></image>自定义节次
+                <text class="cell-value" style="color:#999;" wx:if="{{!indexNodeCustom}}">点击自定义节次</text>
+                <text class="cell-value" style="font-size:{{(1/customName.length*350)>=32.5?(32.5):(1/customName.length*350)}}rpx" wx:if="{{indexNodeCustom}}">{{customName}}</text>
+                <image catchtap="tapNodeCustomDelete" class="more-black" src="/images/ic_evaluate_delete.png"
+                    wx:if="{{indexNodeCustom}}"></image>
+                <image wx:if="{{show_check&&!indexNodeCustom}}" class="more-black" src="/images/down.png"></image>
+                <image wx:if="{{!show_check&&!indexNodeCustom}}" class="more-black" src="/images/ic_application_more.png"></image>
+            </view>
+        </view>
+    </view>
+
+    <view wx:if="{{show_check}}" class="check_box_view h-layout-hc">
+        <view wx:for="{{node_check}}" class="check_box v-layout-hc">
+            <view class="check_ali v-layout-hc">
+                <text style="color:#999;font-size:30rpx">{{item.name}}</text>
+                <checkbox checked="{{node_arr[index]}}" value="{{item}}" bindtap="tap_check" id="{{index}}"></checkbox>
+            </view>
+        </view>
+    </view>
+
+    <view wx:if="{{show_check_tech}}" class="v-layout-hc check_box_tech_view">
+        <view class="check_box_1 h-layout-hc">
+        <view wx:for="{{teachingBuild_1}}" class="check_box v-layout-hc">
+            <view class="check_ali v-layout-hc">
+                <text style="color:#999;font-size:23rpx">{{item.teachingBuildingName}}</text>
+                <checkbox checked="{{tech_arr_1[index]}}" value="{{item}}" bindtap="tap_check_1" data-status = "0" id="{{index}}"></checkbox>
+            </view>
+        </view></view>
+        <view class="check_box_1 h-layout-hc">
+            <view wx:for="{{teachingBuild_2}}" class="check_box v-layout-hc">
+            <view class="check_ali v-layout-hc">
+                <text style="color:#999;font-size:23rpx">{{item.teachingBuildingName}}</text>
+                <checkbox checked="{{tech_arr_2[index]}}" value="{{item}}" bindtap="tap_check_1" data-status = "4" id="{{index}}"></checkbox>
+            </view>
+        </view></view>
+        <view class="check_box_1 h-layout-hc"><view wx:for="{{teachingBuild_3}}" class="check_box v-layout-hc">
+            <view class="check_ali v-layout-hc">
+                <text style="color:#999;font-size:23rpx">{{item.teachingBuildingName}}</text>
+                <checkbox checked="{{tech_arr_3[index]}}" value="{{item}}" bindtap="tap_check_1" data-status = "8" id="{{index}}"></checkbox>
+            </view>
+        </view></view>
+        <view class="check_box_1 h-layout-hc"><view wx:for="{{teachingBuild_4}}" class="check_box v-layout-hc">
+            <view class="check_ali v-layout-hc">
+                <text style="color:#999;font-size:23rpx">{{item.teachingBuildingName}}</text>
+                <checkbox checked="{{tech_arr_4[index]}}" value="{{item}}" bindtap="tap_check_1" data-status = "12" id="{{index}}"></checkbox>
+            </view>
+        </view></view>
+    </view>
+
+    <button bindtap="tabSubmit" class="btn-green">查询</button>
+    <view class="select" style="position:relative;bottom:10rpx">快速查询</view>
+    <view class="select-item ">
+        <text bindtap="tabFirstSelect" class=" weight1  vertical flex" data-id="{{item.nodeId}}"
+            data-name="{{item.nodeName}}" style="width:225rpx;" wx:for="{{fastParams}}">{{item.nodeName}}</text>
+    </view>
+</view>

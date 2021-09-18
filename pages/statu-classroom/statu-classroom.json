@@ -1,0 +1,7 @@
+{ 
+  "navigationBarTitleText": "教室状态",
+  "usingComponents": {
+    "mp-html": "/component/mp-html/index",
+    "wux-notice-bar": "/component/notice-bar/index"
+  }
+}

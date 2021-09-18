@@ -1,0 +1,101 @@
+page {
+    margin: 0rpx;
+}
+
+.top {
+    width: 710rpx;
+    height: 240rpx;
+    background: rgba(255,255,255,1);
+    border-radius: 10rpx;
+    margin: 20rpx;
+}
+
+.top-address {
+    padding-top: 15rpx;
+    margin-bottom: 10rpx;
+    width: 528rpx;
+    height: 45rpx;
+    font-size: 32rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #999;
+    line-height: 45rpx;
+}
+
+.top-time {
+    margin-top: 20rpx;
+    width: 528rpx;
+    height: 45rpx;
+    font-size: 32rpx;
+    color: #999;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    line-height: 45rpx;
+}
+
+.top-text {
+    margin: 20rpx;
+    width: 166rpx;
+    height: 40rpx;
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #2795e5;
+    line-height: 40rpx;
+}
+
+.top-address image {
+    width: 30rpx;
+    height: 30rpx;
+    margin-left: 20rpx;
+    margin-right: 10rpx;
+}
+
+.top-time image {
+    width: 30rpx;
+    height: 30rpx;
+    margin-left: 20rpx;
+    margin-right: 10rpx;
+}
+
+.classroom-label {
+    color: #222;
+    background: white;
+    line-height: 60rpx;
+    font-size: 32rpx;
+    padding: 20rpx;
+}
+
+.classroom {
+    background: white;
+    font-size: 32rpx;
+    color: #222;
+    line-height: 88rpx;
+    height: 88rpx;
+    margin: 0 20rpx;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.cell:after {
+    right: 20rpx;
+    left: 20rpx;
+}
+
+.class-contanier {
+    width: 750rpx;
+    background: rgba(255,255,255,1);
+}
+
+.classroom-status {
+    text-align: right;
+    font-size: 26rpx;
+    color: #999;
+}
+
+.classroom-status .status-empty {
+    color: #004f99;
+}
+
+/* .classroom-status .status-full {
+    color: #f75a57;
+} */

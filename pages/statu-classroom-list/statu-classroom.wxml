@@ -1,0 +1,5 @@
+<wux-notice-bar mode = "closable">{{notifucationText}}</wux-notice-bar>
+<view class="top-time flex align-center">
+            <image src="/images/ic_application_search_time.png"></image>查询周次:第{{week}}周</view>
+<mp-html container-style="{{tagStyle}}" content="{{preHtml}}" />
+<mp-html content="{{html}}" />

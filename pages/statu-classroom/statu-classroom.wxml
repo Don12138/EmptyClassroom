@@ -1,0 +1,38 @@
+<wux-notice-bar loop leading="3500" trailing="2500" speed="20" mode = "closable">{{notifucationText}}</wux-notice-bar>
+
+<!-- <mp-html container-style="{{tagStyle}}" content="{{preHtml}}" /> -->
+<view clss="container2">
+    <view class="picker-view">
+        <picker class="cell" disabled>
+            <view class="cell" style="padding-left:0rpx;">
+                <image class="cell-image" src="/images/ic_date.png"></image>本周
+                <text class="cell-value" style="color:#999;" >第{{currentWeek}}周</text>
+                <image class="more-black" src=""></image>
+            </view>
+        </picker>
+        <picker class="cell" disabled>
+            <view class="cell" style="padding-left:0rpx;">
+                <image class="cell-image" src="/images/ic_common_school.png"></image>校区
+                <text class="cell-value" style="color:#999;" >二校区</text>
+                <image class="more-black" src=""></image>
+            </view>
+        </picker>
+
+        <picker mode="selector" bindchange="bindPickerChange" class="cell" range ="{{buildingInfo}}" value="{{buildingIndex}}" range-key="teachingBuildingName">
+          <view class="cell" style="padding-left:0rpx;">
+                <image class="cell-image" src="/images/ic_common_gongsi.png"></image>教学楼
+                <text class="cell-value" style="color:#999;" >{{buildingInfo[buildingIndex].teachingBuildingName}}</text>
+                <image class="more-black" src="/images/ic_application_more.png"></image>
+            </view>
+        </picker>
+
+        <picker mode="selector" bindchange="bindweekPickerChange" class="cell" range ="{{weekInfo}}" value="{{weekIndex}}">
+          <view class="cell" style="padding-left:0rpx;">
+                <image class="cell-image" src="/images/custom.png"></image>周次
+                <text class="cell-value" style="color:#999;" >第{{weekInfo[weekIndex]}}周</text>
+                <image class="more-black" src="/images/ic_application_more.png"></image>
+            </view>
+        </picker>
+    </view>
+    <button bindtap="tabSubmit" class="btn-green">查询</button>
+</view>

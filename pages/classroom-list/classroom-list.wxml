@@ -1,0 +1,25 @@
+<import src="../../common/emptyview.wxml"></import>
+<view class="contanier">
+    <view class="top">
+        <view class="top-address flex align-center">
+            <image src="/images/ic_application_search_position.png"></image>教室地点</view>
+        <text class="top-text">二校区/{{teachBuildingStr}} </text>
+        <view class="top-time flex align-center">
+            <image src="/images/ic_application_search_time.png"></image>查询时间</view>
+        <text class="top-text" style="font-size:20rpx">{{selectDayStr}}/{{nodeName}}</text>
+    </view>
+    <view class="class-contanier">
+        <view class="classroom-item" wx:for="{{classroomList}}">
+            <view class="classroom-label" style="font-weight:bold">
+     {{item.teachingBuildingName}}
+    </view>
+            <view bindtap="apply" class="classroom flex " data-crid="{{room.classroomId}}" data-crname="{{room.classroomName}}" data-tbid="{{item.teachingBuildingId}}" data-tbname="{{item.teachingBuildingName}}" wx:for="{{item.classroomList}}" wx:for-item="room">
+      {{room.classroomName}}
+        <view class="classroom-status weight1 ">
+                    <text class="status-empty">容量：{{room.seatNumber}} 人</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <template is="empty" data="{{...empty}}" wx:if="{{showEmpty}}"></template>
+</view>

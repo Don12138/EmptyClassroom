@@ -1,0 +1,7 @@
+
+<image src="../../images/download.png" mode="widthFix" class="cur"></image>
+<view class="container">
+  <image src="../../images/time1.png" mode="widthFix" style="width:100%"></image>
+  <image src="../../images/time2.png" mode="widthFix" style="width:100%"></image>
+  <image src="https://jw.ncepu.edu.cn/jiaowuchu/UserFiles/jxk/image/202107/2021-2022%E5%AD%A6%E5%B9%B4%E6%A0%A1%E5%8E%86.png" style="width:100%" mode="widthFix"></image>
+</view>
